@@ -1,7 +1,7 @@
-<Router></Router>
-<SomeView></SomeView>
-<AnotherView></AnotherView>
-<DefaultView></DefaultView>
+<Router ref:router></Router>
+<SomeView ref:someView></SomeView>
+<AnotherView ref:anotherView></AnotherView>
+<DefaultView ref:defaultView></DefaultView>
 
 <script type="text/javascript">
   import Router from './Router.html';
@@ -10,6 +10,13 @@
   import DefaultView from './DefaultView.html';
 
   export default {
+    onrender() {
+      this.refs.router.setRoutes({
+        'the-default-view': this.refs.defaultView,
+        'some-view': this.refs.someView,
+        'another-view': this.refs.anotherView
+      })
+    },
     components: {
       Router, SomeView, AnotherView, DefaultView
     }

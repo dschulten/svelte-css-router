@@ -23,9 +23,17 @@
 
     },
     methods: {
-      routeChange: function (routeId) {
+      routeChange(routeId) {
         // TODO notify current component
+        // need a structure which allows to look up component for routeId
+        console.log(this.get('routes'));
+        if (this.get('routes')) {
+          console.log(this.get('routes')[routeId]);
+        }
         console.log(routeId);
+      },
+      setRoutes(routes) {
+        this.set({'routes': routes});
       }
     }
   }
