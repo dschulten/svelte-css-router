@@ -6,7 +6,10 @@ Svelte app with css-only router, as suggested by https://www.smashingmagazine.co
 See package.json for npm scripts
 
 ### Developing
-npm start
+The project uses webpack-dev-server for live reloading.
+
+    npm start
+
 open localhost:8080
 
 ### Production build
