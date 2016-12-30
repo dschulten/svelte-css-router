@@ -2,3 +2,15 @@
   <h1>The default view</h1>
   <p>This view is visible by default when the user first arrives at the app.</p>
 </div>
+<script>
+  export default {
+    methods: {
+      onenter() {
+        console.log("entered default view");
+      },
+      onexit() {
+        console.log("leaving default view");
+      }
+    }
+  }
+</script>
