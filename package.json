@@ -1,0 +1,41 @@
+{
+  "name": "svelte-css-router",
+  "version": "0.0.1",
+  "description": "# svelte-css-router",
+  "main": "server.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "cross-env NODE_ENV=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dschulten/svelte-css-router.git"
+  },
+  "keywords": [
+    "svelte",
+    "css",
+    "router"
+  ],
+  "author": "dschulten",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "cross-env": "^3.1.3",
+    "find-cache-dir": "^0.1.1",
+    "html-webpack-plugin": "^2.24.1",
+    "svelte-loader": "1.0.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^1.0.2"
+  },
+  "dependencies": {
+    "svelte": "^1.1.3"
+  },
+  "bugs": {
+    "url": "https://github.com/dschulten/svelte-css-router/issues"
+  },
+  "homepage": "https://github.com/dschulten/svelte-css-router#readme"
+}

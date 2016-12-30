@@ -1,0 +1,32 @@
+<script type="text/javascript">
+  export default {
+    data() {
+      return {
+        defaultRoute: 'the-default-view'
+      }
+    },
+    onrender () {
+      addEventListener('hashchange',
+        () => this.routeChange(window.location.hash.substr(1)));
+
+      // If there is no hash in the URL, change the URL to
+      // include the default view's hash.
+      if (!location.hash) {
+        location.hash = this.get('defaultRoute');
+      } else {
+        // Execute routeChange() for the first time
+        this.routeChange(location.hash.substr(1));
+      }
+    },
+
+    onteardown () {
+
+    },
+    methods: {
+      routeChange: function (routeId) {
+        // notify current component
+        console.log(routeId);
+      }
+    }
+  }
+</script>

@@ -1,0 +1,15 @@
+# svelte-css-router
+
+Svelte app with css-only router, as suggested by https://www.smashingmagazine.com/2015/12/reimagining-single-page-applications-progressive-enhancement/#one-view-at-a-time[Heydon Pickering].
+
+## Getting started
+See package.json for npm scripts
+
+### Developing
+npm start
+open localhost:8080
+
+### Production build
+    npm run build
+
+Creates output in dist folder.
