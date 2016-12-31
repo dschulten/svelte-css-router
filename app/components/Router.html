@@ -1,3 +1,5 @@
+{{yield}}
+
 <script type="text/javascript">
   export default {
     data() {
@@ -32,7 +34,7 @@
             this.currentView.onexit();
           }
           this.currentView = next;
-          if(next.onenter) {
+          if(next && next.onenter) {
             next.onenter();
           }
         }

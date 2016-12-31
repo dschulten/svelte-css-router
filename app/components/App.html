@@ -1,13 +1,18 @@
-<Router ref:router></Router>
-<SomeView ref:someView></SomeView>
-<AnotherView ref:anotherView></AnotherView>
-<DefaultView ref:defaultView></DefaultView>
+<Router ref:router>
+  <SomeView ref:someView></SomeView>
+  <AnotherView ref:anotherView customers="{{customers}}"></AnotherView>
+  <DefaultView ref:defaultView></DefaultView>
+  {{#each customers as cust}}
+  <Customer cust="{{cust}}"></Customer>
+  {{/each}}
+</Router>
 
 <script type="text/javascript">
   import Router from './Router.html';
   import SomeView from './SomeView.html';
   import AnotherView from './AnotherView.html';
   import DefaultView from './DefaultView.html';
+  import Customer from './Customer.html';
 
   export default {
     onrender() {
@@ -18,7 +23,363 @@
       })
     },
     components: {
-      Router, SomeView, AnotherView, DefaultView
+      Router, SomeView, AnotherView, DefaultView, Customer
+    },
+    data() {
+      return {
+        customers: [
+          {
+            id: 0,
+            firstName: 'Meghan',
+            lastName: 'White',
+            phone: '593-964-7111',
+            email: 'Russell.Rath81@yahoo.com'
+          },
+          {
+            id: 1,
+            firstName: 'Dangelo',
+            lastName: 'McGlynn',
+            phone: '152-935-4553',
+            email: 'Bryce_Metz24@hotmail.com'
+          },
+          {
+            id: 2,
+            firstName: 'Syble',
+            lastName: 'Hoeger',
+            phone: '244-429-1639',
+            email: 'Kris.Halvorson18@yahoo.com'
+          },
+          {
+            id: 3,
+            firstName: 'Belle',
+            lastName: 'Dietrich',
+            phone: '271-805-0744',
+            email: 'Ronaldo.Morissette79@gmail.com'
+          },
+          {
+            id: 4,
+            firstName: 'Maritza',
+            lastName: 'Marquardt',
+            phone: '913-809-1519',
+            email: 'Toby.Bogan2@yahoo.com'
+          },
+          {
+            id: 5,
+            firstName: 'Annamarie',
+            lastName: 'O\'Kon',
+            phone: '671-516-2111',
+            email: 'Macie.Kuhic49@hotmail.com'
+          },
+          {
+            id: 6,
+            firstName: 'Adonis',
+            lastName: 'West',
+            phone: '376-864-5665',
+            email: 'Kiana_Corkery@yahoo.com'
+          },
+          {
+            id: 7,
+            firstName: 'Sarina',
+            lastName: 'Walter',
+            phone: '931-718-6082',
+            email: 'Lillie27@hotmail.com'
+          },
+          {
+            id: 8,
+            firstName: 'Christophe',
+            lastName: 'Heathcote',
+            phone: '509-570-1807',
+            email: 'Fausto.Spencer67@hotmail.com'
+          },
+          {
+            id: 9,
+            firstName: 'Zakary',
+            lastName: 'Towne',
+            phone: '764-781-7143',
+            email: 'Cassandre56@yahoo.com'
+          },
+          {
+            id: 10,
+            firstName: 'Collin',
+            lastName: 'Bogisich',
+            phone: '323-494-9032',
+            email: 'Litzy.McCullough@yahoo.com'
+          },
+          {
+            id: 11,
+            firstName: 'Rick',
+            lastName: 'Renner',
+            phone: '677-638-8658',
+            email: 'Victor.Cole33@yahoo.com'
+          },
+          {
+            id: 12,
+            firstName: 'Mary',
+            lastName: 'Will',
+            phone: '952-736-4926',
+            email: 'Vincenzo.Mraz35@yahoo.com'
+          },
+          {
+            id: 13,
+            firstName: 'Daniela',
+            lastName: 'Torp',
+            phone: '483-172-3064',
+            email: 'Levi49@yahoo.com'
+          },
+          {
+            id: 14,
+            firstName: 'Danny',
+            lastName: 'Langosh',
+            phone: '471-943-2037',
+            email: 'Leonora71@hotmail.com'
+          },
+          {
+            id: 15,
+            firstName: 'Carolanne',
+            lastName: 'Kerluke',
+            phone: '014-932-0699',
+            email: 'Susanna.Herman42@hotmail.com'
+          },
+          {
+            id: 16,
+            firstName: 'Lorenza',
+            lastName: 'Altenwerth',
+            phone: '496-531-3488',
+            email: 'Sunny72@yahoo.com'
+          },
+          {
+            id: 17,
+            firstName: 'Diego',
+            lastName: 'Huels',
+            phone: '364-736-3018',
+            email: 'Dorothy_Satterfield@yahoo.com'
+          },
+          {
+            id: 18,
+            firstName: 'Devyn',
+            lastName: 'Marvin',
+            phone: '827-563-3192',
+            email: 'Golden_Kris@hotmail.com'
+          },
+          {
+            id: 19,
+            firstName: 'Flavie',
+            lastName: 'Smith',
+            phone: '285-264-8644',
+            email: 'Verla_Erdman49@gmail.com'
+          },
+          {
+            id: 20,
+            firstName: 'Kelley',
+            lastName: 'Barton',
+            phone: '082-791-9145',
+            email: 'Leslie.Tremblay@yahoo.com'
+          },
+          {
+            id: 21,
+            firstName: 'Garret',
+            lastName: 'Williamson',
+            phone: '315-216-9830',
+            email: 'Hadley_Leffler@gmail.com'
+          },
+          {
+            id: 22,
+            firstName: 'Norma',
+            lastName: 'O\'Connell',
+            phone: '071-085-7466',
+            email: 'Rashad_Hilll60@hotmail.com'
+          },
+          {
+            id: 23,
+            firstName: 'Gerry',
+            lastName: 'Hickle',
+            phone: '548-671-8843',
+            email: 'Keon23@hotmail.com'
+          },
+          {
+            id: 24,
+            firstName: 'Elbert',
+            lastName: 'Christiansen',
+            phone: '716-529-8303',
+            email: 'Destiney53@gmail.com'
+          },
+          {
+            id: 25,
+            firstName: 'Floyd',
+            lastName: 'Bogisich',
+            phone: '496-627-5959',
+            email: 'Destin.Greenfelder@hotmail.com'
+          },
+          {
+            id: 26,
+            firstName: 'Aurelie',
+            lastName: 'Fay',
+            phone: '994-461-4464',
+            email: 'Ross.Hauck@yahoo.com'
+          },
+          {
+            id: 27,
+            firstName: 'Lee',
+            lastName: 'Ratke',
+            phone: '984-124-8869',
+            email: 'Ransom_Grant@gmail.com'
+          },
+          {
+            id: 28,
+            firstName: 'Jensen',
+            lastName: 'Keebler',
+            phone: '268-238-7920',
+            email: 'Ana_Wisoky@hotmail.com'
+          },
+          {
+            id: 29,
+            firstName: 'Sandra',
+            lastName: 'Powlowski',
+            phone: '016-459-3712',
+            email: 'Brandy.Kuhlman@hotmail.com'
+          },
+          {
+            id: 30,
+            firstName: 'Rosemarie',
+            lastName: 'Will',
+            phone: '638-298-9827',
+            email: 'Tremayne77@hotmail.com'
+          },
+          {
+            id: 31,
+            firstName: 'Kara',
+            lastName: 'Wiegand',
+            phone: '583-889-3083',
+            email: 'Russel_Nitzsche@hotmail.com'
+          },
+          {
+            id: 32,
+            firstName: 'Manuela',
+            lastName: 'Kuvalis',
+            phone: '089-160-2820',
+            email: 'Rowan_Lesch68@hotmail.com'
+          },
+          {
+            id: 33,
+            firstName: 'Zoey',
+            lastName: 'Kessler',
+            phone: '819-518-0076',
+            email: 'Jarred_Stracke@yahoo.com'
+          },
+          {
+            id: 34,
+            firstName: 'Idell',
+            lastName: 'Goldner',
+            phone: '099-527-1160',
+            email: 'Lolita.Lynch@yahoo.com'
+          },
+          {
+            id: 35,
+            firstName: 'Cordell',
+            lastName: 'Frami',
+            phone: '703-371-0528',
+            email: 'Aida52@hotmail.com'
+          },
+          {
+            id: 36,
+            firstName: 'Megane',
+            lastName: 'Lemke',
+            phone: '804-528-8952',
+            email: 'Gladys.Rowe@hotmail.com'
+          },
+          {
+            id: 37,
+            firstName: 'Lexie',
+            lastName: 'Block',
+            phone: '227-486-0892',
+            email: 'Harrison_Ratke@gmail.com'
+          },
+          {
+            id: 38,
+            firstName: 'Kelly',
+            lastName: 'Stokes',
+            phone: '561-708-7131',
+            email: 'Orval85@hotmail.com'
+          },
+          {
+            id: 39,
+            firstName: 'Meda',
+            lastName: 'Cremin',
+            phone: '066-890-4196',
+            email: 'Albert_Dibbert@gmail.com'
+          },
+          {
+            id: 40,
+            firstName: 'Esteban',
+            lastName: 'Klein',
+            phone: '195-350-9333',
+            email: 'Modesto_Wiza7@gmail.com'
+          },
+          {
+            id: 41,
+            firstName: 'Anais',
+            lastName: 'Walsh',
+            phone: '498-834-1442',
+            email: 'Cristobal_Adams79@yahoo.com'
+          },
+          {
+            id: 42,
+            firstName: 'Beulah',
+            lastName: 'West',
+            phone: '911-843-5538',
+            email: 'Tabitha_McGlynn2@yahoo.com'
+          },
+          {
+            id: 43,
+            firstName: 'Sarah',
+            lastName: 'Corkery',
+            phone: '618-079-3065',
+            email: 'Lyric19@gmail.com'
+          },
+          {
+            id: 44,
+            firstName: 'Cooper',
+            lastName: 'Kertzmann',
+            phone: '559-569-5290',
+            email: 'Lulu.Gottlieb@yahoo.com'
+          },
+          {
+            id: 45,
+            firstName: 'Rosalia',
+            lastName: 'Okuneva',
+            phone: '104-626-8620',
+            email: 'Macy_Cole3@gmail.com'
+          },
+          {
+            id: 46,
+            firstName: 'Cooper',
+            lastName: 'Kessler',
+            phone: '795-135-5096',
+            email: 'Annabelle_Mohr@hotmail.com'
+          },
+          {
+            id: 47,
+            firstName: 'Doris',
+            lastName: 'Hettinger',
+            phone: '908-912-1058',
+            email: 'Peggie48@gmail.com'
+          },
+          {
+            id: 48,
+            firstName: 'Kenyon',
+            lastName: 'Larkin',
+            phone: '058-520-0795',
+            email: 'Jessika.Kuhic@hotmail.com'
+          },
+          {
+            id: 49,
+            firstName: 'Ernie',
+            lastName: 'Davis',
+            phone: '598-056-6853',
+            email: 'Aida_Kohler@yahoo.com'
+          }]
+      };
+
     }
   };
 </script>
